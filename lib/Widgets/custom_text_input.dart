@@ -11,7 +11,7 @@ class CustomTextInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 50,
+      height: 48,
       decoration: ShapeDecoration(
         shape: StadiumBorder(),
         color: Colors.grey[200]
