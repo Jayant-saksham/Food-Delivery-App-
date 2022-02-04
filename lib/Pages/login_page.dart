@@ -3,6 +3,7 @@ import 'package:food_delivery/Constant/colors.dart';
 import 'package:food_delivery/Firebase/authetication.dart';
 import 'package:food_delivery/Widgets/custom_text_input.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -93,7 +94,9 @@ class LoginPage extends StatelessWidget {
                   print("Test");
                   Authentication.signInWithGoogle(context: context)
                       .then((value) {
-                    print("Logged IN");
+                    return Fluttertoast.showToast(
+                      msg: "Logged In",
+                    );
                   });
                 },
                 child: Text(
